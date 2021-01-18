@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/htrnl; charset=utf-8">
+    
+    {% block additional_css %}
+
+    {% endblock %}
+    {% block additional_js %}
+
+    {% endblock %}
+    <title>
+        {% block title %}
+        {% endblock %}
+        :: Наименование
+    </title>
+</head>
+
+<body>
+<h1>Базовый</h1>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
