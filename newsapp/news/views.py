@@ -7,4 +7,4 @@ from django.views.generic.list  import ListView
 class NewsView(ListView):
     model = Category
     context_object_name = 'category'
-    template_name = 'category_list.html'
+    template_name = 'news_list.html'
