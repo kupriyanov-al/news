@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import reverse
 
 # Create your models here.
 
@@ -28,6 +29,6 @@ class News(models.Model):
     def __str__(self):
         return self.header
 
-    # def get_absolute_url(self):
-    #     return reverse("_detail", kwargs={"pk": self.pk})
+    def get_absolute_url(self):
+        return reverse("news_detail", kwargs={"pk": self.pk})
 
