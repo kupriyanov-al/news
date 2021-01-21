@@ -22,8 +22,8 @@ class NewsCategoryView(ListView):
     context_object_name = 'news_list'
     template_name = 'news_list.html'
     
+    
     def get_queryset(self):
-         
-         return News.objects.filter(category__pk=self.kwargs['pk'])
+        return News.objects.filter(category__pk=self.kwargs['pk'])
 
 
