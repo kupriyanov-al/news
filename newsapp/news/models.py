@@ -12,9 +12,9 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-
-    # def get_absolute_url(self):
-        # return reverse("_detail", kwargs={"pk": self.pk})
+    
+    def get_absolute_url(self):
+        return reverse("news_category", kwargs={"pk": self.pk})
 
 class News(models.Model):
     header = models.CharField(("Заголовок"), max_length=50)

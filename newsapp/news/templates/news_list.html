@@ -10,11 +10,11 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Featured
+                    {{news_list.category.name}}
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{news_list.header}}</h5>
-                    <p class="card-text">{{news_list.text}}</p>
+                    <p class="card-text">{{news_list.text|truncatechars:200 }}</p>
                     <a href="{{news_list.get_absolute_url}}" class="btn btn-primary">Далее...</a>
                 </div>
                 <div class="card-footer text-muted">

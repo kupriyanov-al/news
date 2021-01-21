@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Новости</a>
+    <a class="navbar-brand" href="{% url 'news_list'%}">Новости</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,13 +14,11 @@
           {% get_list_categories as categoryes%}
           {% for item in categoryes %}
         <li class="nav-item">
-          <a class="nav-link" href="#">{{item.name}}</a>
+          <a class="nav-link" href="{% url 'news_category' item.pk %}">{{item.name}}</a>
         </li>
           {% endfor %}
-          
-        
-        
          
+
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
